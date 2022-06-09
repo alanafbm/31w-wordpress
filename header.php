@@ -19,8 +19,14 @@
     <section class="site">
         <header class="site__header">
             <section class="site__branding">
-Titre do site
+                <h1>
+                    <a href="<?= esc_url( home_url( '/' ) ) ?>"><?= bloginfo( 'name' ); ?></a>
+                </h1>
+                <h2>
+                <?= bloginfo( 'description' ); ?>
+                </h2>
             </section>
-            <nav class="site__navigation">Menu</nav>
+            <nav class="site__navigation">
+            Menu
+            </nav>
         </header>
-   

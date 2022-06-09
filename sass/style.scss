@@ -1,5 +1,6 @@
 /*!
-Theme Name: 31w-exercice1 
+Theme Name: 31w- Alana Moraes
+Theme URI: http://underscores.me/
 Author: Alana Moraes
 Author URI: http://github.com/alanafbm/
 Description: Theme de base pour le cours de 31W
@@ -9,29 +10,19 @@ Requires PHP: 5.4
 License: GNU General Public License v2 or later
 License URI: LICENSE
 Text Domain: 31-w
-Tags: custom-background, custom-logo, custom-menu, featured-images, threaded-comments, translation-ready
 
-This theme, like WordPress, is licensed under the GPL.
-Use it to make something cool, have fun, and share what you've learned.
-
-mon_underscore is based on Underscores https://underscores.me/, (C) 2012-2020 Automattic, Inc.
-Underscores is distributed under the terms of the GNU GPL v2 or later.
-
-Normalizing styles have been helped along thanks to the fine work of
-Nicolas Gallagher and Jonathan Neal https://necolas.github.io/normalize.css/
-*/
 
 /*--------------------------------------------------------------
 >>> TABLE OF CONTENTS:
 ----------------------------------------------------------------
+# Variable 
+	-Couleur
+	-Police
+	-Dimension
 # Generic
 	- Normalize
 	- Box sizing
-# Base
-	- Typography
-	- Elements
-	- Links
-	- Forms
+
 ## Layouts
 # Components
 	- Navigation
@@ -45,10 +36,14 @@ Nicolas Gallagher and Jonathan Neal https://necolas.github.io/normalize.css/
 	- Accessibility
 	- Alignments
 
---------------------------------------------------------------*/
+/*--------------------------------------------------------------*/
 
-// Import variables and mixins.
-@import "abstracts/abstracts";
+/* variable
+--------------------------------------------- */
+@import "variable/typography";
+@import "variable/dimension";
+@import "variable/colors";
+
 
 /*--------------------------------------------------------------
 # Generic
@@ -66,4 +61,3 @@ Nicolas Gallagher and Jonathan Neal https://necolas.github.io/normalize.css/
 # Base
 --------------------------------------------------------------*/
 @import "base/base";
-
