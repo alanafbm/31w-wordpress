@@ -642,7 +642,12 @@ https://css-tricks.com/snippets/css/complete-guide-grid/
 
 }
 .menu__sidebar {
-  //background-color: beige;
+  position: absolute;
+  width: 100vw;
+  z-index: 99;
+  background-color: black;
+  top: 0;
+  left: 0;
 }
 
 
