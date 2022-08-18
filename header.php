@@ -28,9 +28,14 @@
            
         </header>
         <section class="site__sidebar">
-            <h3>Sidebar</h3>
+            <!--<h3>Sitebar</h3>-->
+            <input type="checkbox" name="chk-burger" id="chk-burger">
+            <label for="chk-burger" id="burger">
+              <img class="menu__burger"src="https://s2.svgbox.net/materialui.svg?ic=menu&color=000" width="32" height="32">
+            </label>
              <?php wp_nav_menu(array(
                         'menu' => '',
+                        'menu' => 'menu sidebar',
                         'container' => 'nav',
                         'container_class' => 'menu__sidebar',
                         'menu_class' => 'menu__sidebar__ul'
