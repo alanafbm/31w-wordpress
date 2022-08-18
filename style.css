@@ -635,21 +635,40 @@ https://css-tricks.com/snippets/css/complete-guide-grid/
 }
 
 @media screen and (min-width: 700px) {
-.site {
-      grid-template-columns: 20vw auto;
-      grid-template-areas: "header header" "sidebar main" "footer footer";
-}
+	.site {
+	      grid-template-columns: 20vw auto;
+	      grid-template-areas: "header header" "sidebar main" "footer footer";
+	}
 
 }
+
+#burger{
+  position: absolute;
+  top: 40px;
+  left: 0;
+  z-index: 100;
+}
+
 .menu__sidebar {
   position: absolute;
+  padding-top: 75px;
   width: 100vw;
   z-index: 99;
-  background-color: black;
+  background-color: rgb(5, 209, 83);
+  transform: translateX(-100vw);
   top: 0;
   left: 0;
+ 
 }
 
+@media screen and (min-width: 700px) {
+  .menu__sidebar{
+  position: static;
+  width: 100%;
+  transform: translateX(0vw);
+
+  }
+}
 
 .menu__sidebar__ul{
     list-style-type: none;
