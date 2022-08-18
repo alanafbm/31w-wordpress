@@ -643,10 +643,20 @@ https://css-tricks.com/snippets/css/complete-guide-grid/
 }
 
 #burger{
+  display: block;
   position: absolute;
-  top: 40px;
+  padding-bottom: 50px;
+  top: 50px;
   left: 0;
   z-index: 100;
+  transform: rotate(0deg);
+  transition: transform .5s;
+}
+
+@media screen and (min-width: 700px) {
+ #burger{
+   display: none;
+ }
 }
 
 .menu__sidebar {
@@ -654,11 +664,11 @@ https://css-tricks.com/snippets/css/complete-guide-grid/
   padding-top: 75px;
   width: 100vw;
   z-index: 99;
-  background-color: rgb(5, 209, 83);
+  background-color: whitesmoke;
   transform: translateX(-100vw);
+  transition: transform .5s;
   top: 0;
   left: 0;
- 
 }
 
 @media screen and (min-width: 700px) {
@@ -668,6 +678,19 @@ https://css-tricks.com/snippets/css/complete-guide-grid/
   transform: translateX(0vw);
 
   }
+}
+
+#chk-burger{
+  display: none;
+}
+
+#chk-burger:checked ~ .menu__sidebar {
+  transform: translateX(0);
+}
+
+#chk-burger:checked ~ #burger {
+  transform: rotate(90deg);
+  transition: transform .5s;
 }
 
 .menu__sidebar__ul{
