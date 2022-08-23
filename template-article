@@ -24,28 +24,42 @@
 
         <?php
 
+            $animateur = get_field('organisateur');
 
-            $endroit = get_field('endroit');
+            $type_de_formation = get_field('type_de_formation');
+
+            $date_debut = get_field('date_debut');
 
             $duree = get_field('duree');
 
-            $date = get_field('date');
+            $jour_de_la_semaine = get_field('jour_de_la_semaine');
 
-            $heure = get_field('heure');
+            $nombre_par_seance = get_field('nombre_par_seance');
 
-            $animateur = get_field('organisateur');
+            $niveau_de_difficulte = get_field('niveau_de_difficulte');
+
+            $lieu = get_field('lieu');
+
+            $prix = get_field('prix');
+
+
 
             $description = get_field('description');
 
             echo "<p class='annonce__resume'>" . "Animateur : " . $animateur . "</p>";
 
-            echo "<p class='annonce__resume'>" . "Type de formation : " . $description . "</p>";
+            echo "<p class='annonce__resume'>" . "Type de formation : " . $type_de_formation . "</p>";
 
-            echo "<p class='annonce__date'>" . "Date de début de l’atelier  : " . $date . "</p>";
+            echo "<p class='annonce__date'>" . "Date de début de l’atelier  : " . $date_debut . "</p>";
             
-            echo "<p class='annonce__lieu'>" . "Le lieu : " . $endroit . "</p>";
+            echo "<p class='annonce__lieu'>" . "Durée : " . $duree . "</p>";
 
-            echo "<p class='annonce__heure'>" . "L'heure : " . $heure . "</p>";
+            echo "<p class='annonce__heure'>" . "Jour de la semaine : " . $jour_de_la_semaine . "</p>";
+
+            echo "<p class='annonce__heure'>" . "Lieu : " . $lieu . "</p>";
+
+            echo "<p class='annonce__heure'>" . "Prix : " . $prix . "</p>";
+
 
             echo "<p class='annonce__organisateur'>" . "Le responsable de l'évènement : " . $organisateur . "</p>";
 
@@ -55,3 +69,4 @@
     <?php endif ?>
 </main>
 <?php get_footer(); ?>
+
