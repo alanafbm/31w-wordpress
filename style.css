@@ -636,6 +636,11 @@ https://css-tricks.com/snippets/css/complete-guide-grid/
 .site__footer {
   grid-area: footer;
   background-color: #7bcbdf;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  padding: 20px;
 }
 
 @media screen and (min-width: 700px) {
@@ -649,7 +654,7 @@ https://css-tricks.com/snippets/css/complete-guide-grid/
   display: block;
   position: absolute;
   padding-bottom: 50px;
-  top: 3px;
+  top: 40px;
   left: 0;
   z-index: 100;
   transform: rotate(0deg);
@@ -695,15 +700,13 @@ https://css-tricks.com/snippets/css/complete-guide-grid/
   transition: transform .5s;
 }
 
-@media screen and (min-width: 700px) {
-  .menu__sidebar__ul{
-    background-color: black;
-  }
-}
+
 .menu__sidebar__ul{
     list-style-type: none;
     margin: 0;
     padding: .4rem 0;
+    background: rgb(238,174,202);
+    background: radial-gradient(circle, rgba(238,174,202,1) 0%, rgba(148,187,233,1) 100%);
 }
 
 .menu__sidebar__ul .menu-item{ 
@@ -783,6 +786,56 @@ https://css-tricks.com/snippets/css/complete-guide-grid/
 
 .menu-item{
     padding: 30px;
+    margin: 10px;
+}
+
+
+.menu-item-2204:hover{
+    -webkit-filter: drop-shadow(10px 5px 5px rgba(0,0,0,.5));
+    filter: drop-shadow(10px 5px 5px rgba(0,0,0,.5));
+}
+
+.menu-item-2220:hover{
+    -webkit-filter: drop-shadow(10px 5px 5px rgba(0,0,0,.5));
+    filter: drop-shadow(10px 5px 5px rgba(0,0,0,.5));
+}
+
+.menu-item-2217:hover{
+    -webkit-filter: drop-shadow(10px 5px 5px rgba(0,0,0,.5));
+    filter: drop-shadow(10px 5px 5px rgba(0,0,0,.5));
+}
+
+.menu-item-2216:hover{
+    -webkit-filter: drop-shadow(10px 5px 5px rgba(0,0,0,.5));
+    filter: drop-shadow(10px 5px 5px rgba(0,0,0,.5));
+}
+
+.menu-item-2204{
+  background-color: yellow;
+  background: radial-gradient(circle, rgb(228, 240, 174) 0%, rgba(148,187,233,1) 100%);
+  padding: 20px;
+  border-radius: 5px;
+}
+
+.menu-item-2216{
+  background-color: purple;
+  background: radial-gradient(circle, rgb(216, 174, 240) 0%, rgba(148,187,233,1) 100%);
+  padding: 20px;
+  border-radius: 5px;
+}
+
+.menu-item-2217{
+  background-color: greenyellow;
+  background: radial-gradient(circle, rgb(176, 240, 174) 0%, rgba(148,187,233,1) 100%);
+  padding: 20px;
+  border-radius: 5px;
+}
+
+.menu-item-2220{
+  background-color: orange;
+  background: radial-gradient(circle, rgb(247, 169, 97) 0%, rgba(148,187,233,1) 100%);
+  padding: 20px;
+  border-radius: 5px;
 }
 
 mark{
