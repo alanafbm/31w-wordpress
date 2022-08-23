@@ -1,13 +1,16 @@
-/*!
-Theme Name: 31w- Alana theme du cours
-Theme URI: http://underscores.me/
+@charset "UTF-8";
+/*! 
+Theme Name: 31W-cours 
 Author: Alana Moraes
-Author URI: http://github.com/alanafbm/
-Description: Theme de base pour le cours de 31W
+Author URI: https://github.com/alanafbm/31w-wordpress 
+Description: Thème de base pour le cours de 31W
+Version: 1.0.0
+Tested up to: 5.4
+Requires PHP: 5.4
+License: GNU General Public License v2 or later
+License URI: LICENSE
 Text Domain: 31-w
 */
-@charset "UTF-8";
-
 /*--------------------------------------------------------------
 >>> TABLE OF CONTENTS:
 ----------------------------------------------------------------
@@ -490,9 +493,9 @@ a {
   color: #4169e1;
 }
 
-a:visited {
-  color: #290029;
-}
+//a:visited {
+  //color: #290029;
+//}
 
 a:hover, a:focus, a:active {
   color: #191970;
@@ -522,6 +525,7 @@ input[type="submit"] {
   line-height: 1;
   padding: 0.6em 1em 0.4em;
   text-decoration: none;
+  margin: 15px;
 }
 
 .bouton:hover,
@@ -606,7 +610,7 @@ https://css-tricks.com/snippets/css/complete-guide-grid/
   grid-template-areas: "header header" "sidebar sidebar" "main main" "footer footer";
 }
 
-.site__header, .site__sidebar, .site__main, .site__footer, padding {
+.site__header, .site__main, .site__footer, padding {
   padding: 1vh 3vw;
 }
 
@@ -635,14 +639,60 @@ https://css-tricks.com/snippets/css/complete-guide-grid/
 }
 
 @media screen and (min-width: 700px) {
-.site {
+  .site {
       grid-template-columns: 20vw auto;
       grid-template-areas: "header header" "sidebar main" "footer footer";
+  }
 }
 
+#burger{
+  display: block;
+  position: absolute;
+  padding-bottom: 50px;
+  top: 40px;
+  left: 0;
+  z-index: 100;
+  transform: rotate(0deg);
+  transition: transform .5s;
 }
+
+@media screen and (min-width: 700px) {
+ #burger{
+   display: none;
+ }
+}
+
 .menu__sidebar {
-  //background-color: beige;
+  position: absolute;
+  padding-top: 75px;
+  width: 100vw;
+  z-index: 99;
+  transform: translateX(-100vw);
+  transition: transform .5s;
+  top: 0;
+  left: 0;
+}
+
+@media screen and (min-width: 700px) {
+  .menu__sidebar{
+  position: static;
+  width: 100%;
+  transform: translateX(0vw);
+
+  }
+}
+
+#chk-burger{
+  display: none;
+}
+
+#chk-burger:checked ~ .menu__sidebar {
+  transform: translateX(0);
+}
+
+#chk-burger:checked ~ #burger {
+  transform: rotate(90deg);
+  transition: transform .5s;
 }
 
 
@@ -650,6 +700,8 @@ https://css-tricks.com/snippets/css/complete-guide-grid/
     list-style-type: none;
     margin: 0;
     padding: .4rem 0;
+    background: rgb(238,174,202);
+    background: radial-gradient(circle, rgba(238,174,202,1) 0%, rgba(148,187,233,1) 100%);
 }
 
 .menu__sidebar__ul .menu-item{ 
@@ -658,13 +710,17 @@ https://css-tricks.com/snippets/css/complete-guide-grid/
 }
 
 .menu__sidebar__ul .menu-item a{ 
-    padding : .5rem;
-    line-height: 1.5rem;
+    padding: 10px;
+    margin: 20px;
+    line-height: 1.625rem;
+    font-size: 1.2em;
+    border-bottom: 2px solid turquoise;
 }
 
 .menu__sidebar__ul .menu-item a:hover{
     background-color: lighten($color__background-zonegrid, 30%);
 }
+
 .card{
   display: flex;
   flex-direction: column;
@@ -675,6 +731,7 @@ https://css-tricks.com/snippets/css/complete-guide-grid/
   width: 55%;
   flex-wrap: wrap;
 }
+
 .flex-column{
   display: flex;
   flex-direction: column;
@@ -682,19 +739,52 @@ https://css-tricks.com/snippets/css/complete-guide-grid/
   flex-wrap: wrap;
 
 }
+
 .flex-row{
   display: flex;
   flex-wrap: wrap;
+  justify-content: center;
 
 }
+
 .padding{
   padding: 25px;
 }
+
 .cours{
   border: 2px solid grey;
   padding: 25px;
   margin: 25px;
 }
 
+.align-center{
+  text-align: center;
+}
+
+.bouton{
+  text-align:center; 
+  font-weight:bold; 
+  font-size:1.2em;
+  margin: 20px;
+}
+
+.menu{
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    justify-content: center;
+    padding: 80px 0 30px 0;
+    margin: 0;
+    list-style-type: none;
+    font-weight: 600;
+}
+
+.menu-item{
+    padding: 30px;
+}
+
+mark{
+  padding: 15px;
+}
 /* @import "no-sidebar"; */
 /*# sourceMappingURL=style.css.map */
