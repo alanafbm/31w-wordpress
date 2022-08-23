@@ -1,0 +1,57 @@
+<?php
+
+/**
+
+ * Template name: Article
+
+ */
+
+?>
+
+<?php get_header(); ?>
+
+<main class="site__main">
+
+    <mark>Événement à venir</mark>
+
+    <?php if(have_posts()) : the_post(); ?>
+
+    <article class="annonce__article">
+
+        <h1><?= get_the_title(); ?></h1>
+
+        <?php the_content(); ?>
+
+        <?php
+
+
+            $endroit = get_field('endroit');
+
+            $duree = get_field('duree');
+
+            $date = get_field('date');
+
+            $heure = get_field('heure');
+
+            $animateur = get_field('organisateur');
+
+            $description = get_field('description');
+
+            echo "<p class='annonce__resume'>" . "Animateur : " . $animateur . "</p>";
+
+            echo "<p class='annonce__resume'>" . "Type de formation : " . $description . "</p>";
+
+            echo "<p class='annonce__date'>" . "Date de début de l’atelier  : " . $date . "</p>";
+            
+            echo "<p class='annonce__lieu'>" . "Le lieu : " . $endroit . "</p>";
+
+            echo "<p class='annonce__heure'>" . "L'heure : " . $heure . "</p>";
+
+            echo "<p class='annonce__organisateur'>" . "Le responsable de l'évènement : " . $organisateur . "</p>";
+
+        ?>
+
+    </article>
+    <?php endif ?>
+</main>
+<?php get_footer(); ?>
