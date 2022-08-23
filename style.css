@@ -781,6 +781,56 @@ https://css-tricks.com/snippets/css/complete-guide-grid/
 
 .menu-item{
     padding: 30px;
+    margin: 10px;
+}
+
+
+.menu-item-2204:hover{
+    -webkit-filter: drop-shadow(10px 5px 5px rgba(0,0,0,.5));
+    filter: drop-shadow(10px 5px 5px rgba(0,0,0,.5));
+}
+
+.menu-item-2220:hover{
+    -webkit-filter: drop-shadow(10px 5px 5px rgba(0,0,0,.5));
+    filter: drop-shadow(10px 5px 5px rgba(0,0,0,.5));
+}
+
+.menu-item-2217:hover{
+    -webkit-filter: drop-shadow(10px 5px 5px rgba(0,0,0,.5));
+    filter: drop-shadow(10px 5px 5px rgba(0,0,0,.5));
+}
+
+.menu-item-2216:hover{
+    -webkit-filter: drop-shadow(10px 5px 5px rgba(0,0,0,.5));
+    filter: drop-shadow(10px 5px 5px rgba(0,0,0,.5));
+}
+
+.menu-item-2204{
+  background-color: yellow;
+  background: radial-gradient(circle, rgb(228, 240, 174) 0%, rgba(148,187,233,1) 100%);
+  padding: 20px;
+  border-radius: 5px;
+}
+
+.menu-item-2216{
+  background-color: purple;
+  background: radial-gradient(circle, rgb(216, 174, 240) 0%, rgba(148,187,233,1) 100%);
+  padding: 20px;
+  border-radius: 5px;
+}
+
+.menu-item-2217{
+  background-color: greenyellow;
+  background: radial-gradient(circle, rgb(176, 240, 174) 0%, rgba(148,187,233,1) 100%);
+  padding: 20px;
+  border-radius: 5px;
+}
+
+.menu-item-2220{
+  background-color: orange;
+  background: radial-gradient(circle, rgb(247, 169, 97) 0%, rgba(148,187,233,1) 100%);
+  padding: 20px;
+  border-radius: 5px;
 }
 
 mark{
